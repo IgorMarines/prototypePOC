@@ -71,6 +71,20 @@ Certifique-se de ter as seguintes ferramentas instaladas:
    ```sh
    php artisan migrate --seed
    ```
+   Esse comando gerará os seguintes dados:
+   ```php
+   $this->createRoles();
+   $this->createTestUser();
+   $this->createPatients();
+   $this->createUsers();
+   $this->createServices();
+   $this->createAppointments();
+   ```
+   O usuário padrão gerado será:
+   - **Login:** test@example.com
+   - **Senha:** password
+
+   Caso prefira, você também pode acessar a rota `/register` para criar a sua própria conta.
 
 7. Inicie o servidor backend:
    ```sh
